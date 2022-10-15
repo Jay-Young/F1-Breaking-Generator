@@ -1,0 +1,211 @@
+@font-face {
+    font-family: "Formula1 Display Black";
+    src: url(../fonts/Formula1-Black.woff2);
+}
+
+@font-face {
+    font-family: "Formula1 Display Bold";
+    src: url(../fonts/Formula1-Bold.woff2);
+}
+
+@font-face {
+    font-family: "Formula1 Display Regular";
+    src: url(../fonts/Formula1-Regular.woff2);
+}
+
+@font-face {
+    font-family: "Formula1 Display Wide";
+    src: url(../fonts/Formula1-Wide.woff2);
+}
+
+@font-face {
+    font-family: "HarmonyOS Sans SC Black";
+    src: url(../fonts/HarmonyOS_Sans_SC_Black.woff2);
+}
+
+@font-face {
+    font-family: "HarmonyOS Sans SC Regular";
+    src: url(../fonts/HarmonyOS_Sans_SC_Regular.woff2);
+}
+
+:root{
+    --color: #222222;
+    --background: #ff0000;
+}
+
+html, body{
+    width: 100vw;
+    height: 100vh;
+    zoom: 80%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Formula1 Display Regular", "HarmonyOS Sans SC Regular";
+}
+
+#container{
+    width: 1200px;
+    height: 675px;
+    white-space: nowrap;
+    zoom: 100%;
+    /*border: solid 1px black;*/
+    position: relative;
+}
+
+#right{
+    width: 50%;
+    height: 100%;
+    z-index: 5;
+    position: absolute;
+    right: 0;
+    overflow: visible;
+    align-content: center;
+}
+
+#img{
+    left: -5%;
+    position: absolute;
+    object-fit: cover;
+    height: 100%;
+    overflow: hidden;
+}
+
+#imgdiv{
+    z-index: 2;
+    position: absolute;
+    clip-path: polygon(30% 0%, 100% 0, 100% 0, 100% 70%, 70% 100%, 0 100%, 0 100%, 0 30%);
+    width: 50%;
+    height: 675px;
+    overflow: hidden;
+}
+
+#bg{
+    position: absolute;
+    z-index: 1;
+    opacity: 50%;
+    width: 100%;
+    height: 100%;
+    /*filter: grayscale(100%);*/
+}
+
+#breaking, #name, #event, #f1logo, #team{
+    position: absolute;
+    white-space: nowrap;
+    z-index: 2;
+    right: 25px;
+    float: right;
+    color: var(--color);
+}
+
+#breaking{
+    font-family: "Formula1 Display Black", "HarmonyOS Sans SC Black";
+    font-size: 90px;
+    top: 300px;
+}
+
+#name{
+    font-family: "Formula1 Display Black", "HarmonyOS Sans SC Black";
+    font-size: 60px;
+    bottom: 70px;
+}
+
+#event{
+    font-family: "Formula1 Display Regular", "HarmonyOS Sans SC Regular";
+    font-size: 41px;
+    bottom: 5px;
+}
+
+#color{
+    background: var(--background);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+#f1logo{
+    float: left;
+    left: 10px;
+    top: 35px;
+    height: 60px;
+}
+
+#team{
+    height: 15%;
+    display: block;
+    right: 30%;
+    left: 30%;
+    margin: auto;
+    top: 200px;
+}
+
+#properties{
+    float:left;
+    position: relative;
+    zoom: 150%;
+}
+
+#imgrndr{
+    left: 0;
+    top: 0;
+    zoom: 50%;
+}
+
+/*#drop-area{
+    height: 30px;
+    line-height: 30px;
+    width: 15vw;
+    border: 1px solid grey;
+}*/
+
+label, input, button, select{
+    font-size: 1vw;
+}
+
+#table2 tr:first-child{
+    width: 10vw;
+}
+
+td{
+    max-width: 100px;
+}
+
+#drop-area.highlight {
+    border-color: blue;
+}
+
+
+
+@media(orientation: portrait){
+    /* input[type=range]{
+        visibility: hidden;
+        width: 0;
+    } */
+
+    #drop-area{
+        width: 50vw;
+    }
+
+    #properties{
+        width: 60vw;
+        zoom: 300%
+    }
+
+    #table1 tr td{
+        width: 2vw;
+    }
+
+    #container{
+        zoom: 80%;
+    }
+
+    #table1{
+        zoom: 90%;
+    }
+
+    #table2, #table1{
+        width: 40vw;
+    }
+}
