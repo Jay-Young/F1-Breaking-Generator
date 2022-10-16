@@ -30,17 +30,17 @@ const words = {
 };
 
 const teamLogos = {
-	Ferrari: 'imgs/teams/ferrari.png',
-	Mercedes: 'imgs/teams/mercedes.png',
-	'Red Bull': 'imgs/teams/redbull.png',
-	'Aston Martin': 'imgs/teams/aston.png',
-	McLaren: 'imgs/teams/mclaren.png',
-	Alpine: 'imgs/teams/alpine.png',
-	'Alfa Romeo': 'imgs/teams/alfa.png',
-	AlphaTauri: 'imgs/teams/alpha.png',
-	Haas: 'imgs/teams/haas.png',
-	Williams: 'imgs/teams/williams.png',
-	'Formula 1': 'imgs/basic/F1-Logo-Dark.png',
+	Ferrari: 'https://cdn.jsdelivr.net/gh/Jay-Young/F1-Breaking-Generator/imgs/teams/ferrari.png',
+	Mercedes: 'https://cdn.jsdelivr.net/gh/Jay-Young/F1-Breaking-Generator/imgs/teams/mercedes.png',
+	'Red Bull': 'https://cdn.jsdelivr.net/gh/Jay-Young/F1-Breaking-Generator/imgs/teams/redbull.png',
+	'Aston Martin': 'https://cdn.jsdelivr.net/gh/Jay-Young/F1-Breaking-Generator/imgs/teams/aston.png',
+	McLaren: 'https://cdn.jsdelivr.net/gh/Jay-Young/F1-Breaking-Generator/imgs/teams/mclaren.png',
+	Alpine: 'https://cdn.jsdelivr.net/gh/Jay-Young/F1-Breaking-Generator/imgs/teams/alpine.png',
+	'Alfa Romeo': 'https://cdn.jsdelivr.net/gh/Jay-Young/F1-Breaking-Generator/imgs/teams/alfa.png',
+	AlphaTauri: 'https://cdn.jsdelivr.net/gh/Jay-Young/F1-Breaking-Generator/imgs/teams/alpha.png',
+	Haas: 'https://cdn.jsdelivr.net/gh/Jay-Young/F1-Breaking-Generator/imgs/teams/haas.png',
+	Williams: 'https://cdn.jsdelivr.net/gh/Jay-Young/F1-Breaking-Generator/imgs/teams/williams.png',
+	'Formula 1': 'https://cdn.jsdelivr.net/gh/Jay-Young/F1-Breaking-Generator/imgs/basic/F1-Logo-Dark.png',
 };
 
 const teamBgColors = {
@@ -79,7 +79,7 @@ function setTeamStyle(teamName) {
 
 function chooseDriver(driver) {
 	nmconst.innerText = driverArray[drivers.selectedIndex];
-	img('imgs/drivers/' + driver + '.jpg');
+	img('https://cdn.jsdelivr.net/gh/Jay-Young/F1-Breaking-Generator/imgs/drivers/' + driver + '.jpg');
 	if (words[driver]) {
 		evconst.innerText = words[driver].toUpperCase();
 	} else {
@@ -161,5 +161,5 @@ randomChoice.addEventListener('click', function () {
 	drivers.value = firstName;
 	setTeamStyle(teamName);
 	chooseDriver(firstName.toLowerCase());
-	console.log(select.value, firstName);
+	// console.log(select.value, firstName);
 });

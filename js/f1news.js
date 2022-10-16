@@ -25,10 +25,10 @@ const posbtn = document.getElementById('resetPOS');
 
 function textcolor(dark) {
 	if (dark === true) {
-		logo.src = 'imgs/basic/F1-Logo-Dark.png';
+		logo.src = 'https://cdn.jsdelivr.net/gh/Jay-Young/F1-Breaking-Generator/imgs/basic/F1-Logo-Dark.png';
 		style.setProperty('--color', '#222222');
 	} else {
-		logo.src = 'imgs/basic/F1-Logo.png';
+		logo.src = 'https://cdn.jsdelivr.net/gh/Jay-Young/F1-Breaking-Generator/imgs/basic/F1-Logo.png';
 		style.setProperty('--color', '#ffffff');
 	}
 }
@@ -49,18 +49,18 @@ function team(src) {
 //----------------------------------------------------------------------------------------------------------------------
 
 document.getElementById('textcolor').addEventListener('click', function () {
-	if (logo.src.endsWith('imgs/basic/F1-Logo.png')) {
-		logo.src = 'imgs/basic/F1-Logo-Dark.png';
+	if (logo.src.endsWith('https://cdn.jsdelivr.net/gh/Jay-Young/F1-Breaking-Generator/imgs/basic/F1-Logo.png')) {
+		logo.src = 'https://cdn.jsdelivr.net/gh/Jay-Young/F1-Breaking-Generator/imgs/basic/F1-Logo-Dark.png';
 		style.setProperty('--color', '#222222');
 	} else {
-		logo.src = 'imgs/basic/F1-Logo.png';
+		logo.src = 'https://cdn.jsdelivr.net/gh/Jay-Young/F1-Breaking-Generator/imgs/basic/F1-Logo.png';
 		style.setProperty('--color', '#ffffff');
 	}
 
-	if (teamlogo.src.endsWith('imgs/basic/F1-Logo-Dark.png')) {
-		teamlogo.src = 'imgs/basic/F1-Logo.png';
-	} else if (teamlogo.src.endsWith('imgs/basic/F1-Logo.png')) {
-		teamlogo.src = 'imgs/basic/F1-Logo-Dark.png';
+	if (teamlogo.src.endsWith('https://cdn.jsdelivr.net/gh/Jay-Young/F1-Breaking-Generator/imgs/basic/F1-Logo-Dark.png')) {
+		teamlogo.src = 'https://cdn.jsdelivr.net/gh/Jay-Young/F1-Breaking-Generator/imgs/basic/F1-Logo.png';
+	} else if (teamlogo.src.endsWith('https://cdn.jsdelivr.net/gh/Jay-Young/F1-Breaking-Generator/imgs/basic/F1-Logo.png')) {
+		teamlogo.src = 'https://cdn.jsdelivr.net/gh/Jay-Young/F1-Breaking-Generator/imgs/basic/F1-Logo-Dark.png';
 	}
 });
 

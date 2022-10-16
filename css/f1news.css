@@ -20,12 +20,12 @@
 
 @font-face {
     font-family: "HarmonyOS Sans SC Black";
-    src: url(../fonts/HarmonyOS_Sans_SC_Black.woff2);
+    src: url(https://cdn.jsdelivr.net/gh/Jay-Young/F1-Breaking-Generator/fonts/HarmonyOS_Sans_SC_Black.woff2);
 }
 
 @font-face {
     font-family: "HarmonyOS Sans SC Regular";
-    src: url(../fonts/HarmonyOS_Sans_SC_Regular.woff2);
+    src: url(https://cdn.jsdelivr.net/gh/Jay-Young/F1-Breaking-Generator/fonts/HarmonyOS_Sans_SC_Regular.woff2);
 }
 
 :root{

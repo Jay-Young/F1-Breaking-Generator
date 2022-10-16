@@ -2,7 +2,7 @@
 
 ![示例](imgs/basic/example.png)
 
-在线示例：https://f1.233so.com
+在线示例：[https://f1.233so.com](https://f1.233so.com)
 
 ## 鸣谢
 
