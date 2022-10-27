@@ -155,6 +155,11 @@ select.addEventListener('input', function () {
 			chooseDriver(drivers.value.toLowerCase());
 			setTeamStyle('Audi');
 			break;
+		case 'Porsche':
+			drivers.value = 'None';
+			chooseDriver(drivers.value.toLowerCase());
+			setTeamStyle('Porsche');
+			break;
 	}
 });
 
