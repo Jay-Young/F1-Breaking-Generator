@@ -41,7 +41,8 @@ const teamLogos = {
 	Haas: 'imgs/teams/haas.png',
 	Williams: 'imgs/teams/williams.png',
 	'Formula 1': 'imgs/basic/F1-Logo-Dark.png',
-	Audi: 'imgs/teams/audi.svg',
+	Audi: 'imgs/teams/audi.png',
+	Porsche: 'imgs/teams/porsche.svg',
 };
 
 const teamBgColors = {
@@ -56,7 +57,8 @@ const teamBgColors = {
 	Haas: '#ED1A3B',
 	Williams: '#0F9CDD',
 	'Formula 1': '#FFFFFF',
-	Audi: '#FFFFFF',
+	Audi: '#262626',
+	Porsche: '#E6AF5D',
 };
 
 const teamTextColor = {
@@ -71,7 +73,8 @@ const teamTextColor = {
 	Haas: false,
 	Williams: false,
 	'Formula 1': true,
-	Audi: true,
+	Audi: false,
+	Porsche: true,
 };
 
 function setTeamStyle(teamName) {
