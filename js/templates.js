@@ -41,6 +41,7 @@ const teamLogos = {
 	Haas: 'imgs/teams/haas.png',
 	Williams: 'imgs/teams/williams.png',
 	'Formula 1': 'imgs/basic/F1-Logo-Dark.png',
+	Audi: 'imgs/teams/audi.svg',
 };
 
 const teamBgColors = {
@@ -55,6 +56,7 @@ const teamBgColors = {
 	Haas: '#ED1A3B',
 	Williams: '#0F9CDD',
 	'Formula 1': '#FFFFFF',
+	Audi: '#FFFFFF',
 };
 
 const teamTextColor = {
@@ -69,6 +71,7 @@ const teamTextColor = {
 	Haas: false,
 	Williams: false,
 	'Formula 1': true,
+	Audi: true,
 };
 
 function setTeamStyle(teamName) {
@@ -143,6 +146,11 @@ select.addEventListener('input', function () {
 			drivers.value = 'None';
 			chooseDriver(drivers.value.toLowerCase());
 			setTeamStyle('Formula 1');
+			break;
+		case 'Audi':
+			drivers.value = 'None';
+			chooseDriver(drivers.value.toLowerCase());
+			setTeamStyle('Audi');
 			break;
 	}
 });

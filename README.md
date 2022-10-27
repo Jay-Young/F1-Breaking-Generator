@@ -1,6 +1,12 @@
 # F1 Breaking 新闻生成器
 
-![示例](imgs/basic/example.png)
+## 示例
+
+**竖版：**
+![示例](imgs/basic/example-vertical.png)
+
+**横版：**
+![示例](imgs/basic/example-horizontal.png)
 
 在线示例：[https://f1.233so.com](https://f1.233so.com)
 

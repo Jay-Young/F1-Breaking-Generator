@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@poodrig">
+    <meta name="twitter:creator" content="@poodrig">
+    <meta name="twitter:title" content="F1News creator by poodrig">
+    <meta name="twitter:description" content="Easily create your own fake F1 News images (PC Only)">
+    <meta name="twitter:image" content="https://poodrig.com/js/uploads/60aa9afb5e4da.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>横版设计 - F1 Breaking 生成工具</title>
+    <link type="text/css" href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/bootstrap/5.1.3/css/bootstrap.min.css"
+        rel="stylesheet" crossorigin="anonymous">
+    <script type="text/javascript"
+        src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/bootstrap/5.1.3/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="css/f1news.css">
+    <link rel="shortcut icon" type="image/x-icon" href="imgs/basic/f1.svg">
+    <script type="text/javascript"
+        src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-transparent">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./">首页</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./vertical.html">竖版</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./horizontal.html">横板</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="container" class="mb-3">
+        <div id="color"></div>
+        <img draggable="false" id="bg" src="imgs/basic/F1BG.png" alt="Striped Background">
+        <img draggable="false" id="f1logo" src="imgs/basic/F1-Logo-Dark.png" alt="Formula 1 Logo">
+
+        <div id="imgdiv">
+            <img draggable="false" id="img" src="imgs/drivers/charles.jpg" alt="Main image">
+        </div>
+
+        <div id="right">
+            <img draggable="false" id="team" src="imgs/teams/ferrari.png" alt="Team Logo">
+            <!-- don't make editable, replace src on paste or sth -->
+            <label contenteditable="true" id="breaking">BREAKING</label>
+            <label contenteditable="true" id="name">Charles Leclerc</label>
+            <label contenteditable="true" id="event">I'M STUPID, I'M STUPID</label>
+        </div>
+    </div>
+
+    <div class="container " id="properties">
+        <div class="input-group input-group-sm mb-3">
+            <label for="colorpick" class="input-group-text">背景颜色</label>
+            <input type="color" class="form-control-sm form-control-color p-1 border bg-light" id="colorpick"
+                value="#FF0000" title="选择背景颜色">
+            <button type="button" class="btn btn-dark btn-sm" id="textcolor">黑白转换</button>
+            <label for="templates" class="input-group-text">选择车队</label>
+            <select class="p-1 border bg-light" title="team" id="templates">
+                <option selected="selected" value="Ferrari">Ferrari</option>
+                <option value="Mercedes">Mercedes</option>
+                <option value="Red Bull">Red Bull</option>
+                <option value="Aston Martin">Aston Martin</option>
+                <option value="McLaren">McLaren</option>
+                <option value="Alpine">Alpine</option>
+                <option value="Alfa Romeo">Alfa Romeo</option>
+                <option value="AlphaTauri">AlphaTauri</option>
+                <option value="Haas">Haas</option>
+                <option value="Williams">Williams</option>
+                <option value="Formula 1">Formula 1</option>
+                <option value="Audi">Audi</option>
+            </select>
+            <label for="drivers" class="input-group-text">选择车手</label>
+            <select class="p-1 border bg-light input-group-text" title="driver" id="drivers">
+                <option value="Lewis">Lewis Hamilton</option>
+                <option value="George">George Russell</option>
+                <option value="Max">Max Verstappen</option>
+                <option value="Sergio">Sergio Perez</option>
+                <option value="Daniel">Daniel Ricciardo</option>
+                <option value="Lando">Lando Norris</option>
+                <option value="Sebastian">Sebastian Vettel</option>
+                <option value="Lance">Lance Stroll</option>
+                <option value="Fernando">Fernando Alonso</option>
+                <option value="Esteban">Esteban Ocon</option>
+                <option selected="selected" value="Charles">Charles Leclerc</option>
+                <option value="Carlos">Carlos Sainz</option>
+                <option value="Pierre">Pierre Gasly</option>
+                <option value="Yuki">Yuki Tsunoda</option>
+                <option value="Valtteri">Valtteri Bottas</option>
+                <option value="Zhou">Zhou Guanyu</option>
+                <option value="Kevin">Kevin Magnussen</option>
+                <option value="Mick">Mick Schumacher</option>
+                <option value="Guenther">Guenther Steiner</option>
+                <option value="Alexander">Alexander Albon</option>
+                <option value="Nyck">Nyck de Vries</option>
+                <option value="Nicholas">Nicholas Latifi</option>
+                <option value="Nico">Nico Hulkenberg</option>
+                <option value="Antonio">Antonio Giovinazzi</option>
+                <option value="None">None</option>
+            </select>
+            <button class="btn btn-warning btn-sm" id="random">随机选择</button>
+        </div>
+
+        <div class="input-group input-group-sm mb-3">
+            <label for="inputIMG" class="input-group-text">图片大小</label>
+            <input type="number" class="form-control-sm form-control-color p-1 border bg-light" min="1" max="400"
+                value="100" id="inputIMG" style="width: 60px;">
+            <button class="btn btn-danger btn-sm" id="resetIMG">重置</button>
+        </div>
+
+        <div class="input-group input-group-sm mb-3">
+            <label for="inputPOS" class="input-group-text">图片平移</label>
+            <input type="number" class="form-control-sm form-control-color p-1 border bg-light" min="-100" max="100"
+                value="-5" id="inputPOS" style="width: 60px;">
+            <button class="btn btn-danger btn-sm" id="resetPOS">重置</button>
+        </div>
+
+        <div class="input-group input-group-sm mb-3">
+            <label for="inputBR" class="input-group-text">标题字号</label>
+            <input type="number" class="form-control-sm form-control-color p-1 border bg-light" min="1" max="400"
+                value="90" id="inputBR" style="width: 60px;">
+            <button class="btn btn-danger btn-sm" id="resetBR">重置</button>
+        </div>
+
+        <div class="input-group input-group-sm mb-3">
+            <label for="inputNM" class="input-group-text">姓名字号</label>
+            <input type="number" class="form-control-sm form-control-color p-1 border bg-light" min="1" max="400"
+                value="60" id="inputNM" style="width: 60px;">
+            <button class="btn btn-danger btn-sm" id="resetNM">重置</button>
+        </div>
+
+        <div class="input-group input-group-sm mb-3">
+            <label for="inputNM" class="input-group-text">消息字号</label>
+            <input title="font-size" type="number" class="form-control-sm form-control-color p-1 border bg-light"
+                min="1" max="400" value="41" id="inputEV" style="width: 60px;">
+            <button class="btn btn-danger btn-sm" id="resetEV">重置</button>
+        </div>
+
+        <div class="d-grid gap-2 d-md-block col-md-7">
+            <div class="input-group input-group-sm mb-3" id="drop-area">
+                <input title="upload" class="form-control form-control-sm" type="file" id="fileElem" multiple
+                    accept="image/*" onchange="handleFiles(this.files)">
+                <button type="button" for="drop-area" class="btn btn-success btn-sm" id="render">渲染图像</button>
+                <a type="button" for="drop-area" class="btn btn-primary btn-sm" id="download">下载图像</a>
+            </div>
+
+        </div>
+
+        <div id="imgrndr">
+            <div></div>
+            <br />
+            <div></div>
+        </div>
+
+    </div>
+
+
+
+</body>
+<script type="text/javascript" src="js/f1news.js"></script>
+<script type="text/javascript" src="js/templates.js"></script>
+<script type="text/javascript" src="js/imgupload.js"></script>
+
+</html>
